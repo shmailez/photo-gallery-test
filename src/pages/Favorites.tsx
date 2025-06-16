@@ -15,11 +15,11 @@ export default function Favorites() {
     <>
     <Header/>
     <h1 className='favoritesTitle'>Избранное</h1>
-    <div className="grid">
+    <div className="gridGallery">
       {photos.length > 0 ? (
         photos.map(photo => <PhotoCard key={photo.id} photo={photo} />)
       ) : (
-        <p>No favorites yet.</p>
+        <p>Нет избранных фото</p>
       )}
     </div></>
     

@@ -20,28 +20,25 @@ export default function Search() {
 
   return (
     <>
-    <div className="searshBlock">
+    <div className="searchBar">
         <input
             type="text"
-            placeholder="Search photos..."
+            placeholder="Поиск"
             value={query}
             onChange={e => setQuery(e.target.value)}
         />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch}>🔎︎</button>
     </div>
       
-    <div className="grid">
+    <div className="gridGallery">
 
-{/* {query ? 'yes' : 'no'} */}
+
     {query ? results.map(photo => (
         <PhotoCard key={photo.id} photo={photo} />
     )) : photos.map(photo => (
         <PhotoCard key={photo.id} photo={photo} />
       ))}
 
-    {/* {results.map(photo => (
-        <PhotoCard key={photo.id} photo={photo} />
-    ))} */}
     </div>
     </>
   );

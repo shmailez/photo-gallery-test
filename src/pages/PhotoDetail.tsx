@@ -25,34 +25,34 @@ export default function PhotoDetail() {
   return (
     <>
         <Header/>
-        <div className="photo-detail">
+        {/* <div className="photoDetailPverlay"></div> */}
+        <div className="photoDetailBackground">
+          
+          <div className="photoDetail">
             <div className='description'>
                 <div className='author'>
                     <img src={photo.user.profile_image.small} alt={photo.user.name} />
-                    <p>Author: {photo.user.name}</p>
+                    <p>Автор: {photo.user.name}</p>
                 </div>
-                
-                {/* <p>Likes: {photo.likes}</p> */}
                 <div className='buttons'>
+                  <button onClick={handleToggleFavorite}>
+                        {isFavorite(photo.id) ? '♥' : '♡'}
+                    </button>
                     <a
-                    className="download-button"
-                    href={photo.links.download}
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >
-                    Download
-                </a>
-                <button onClick={handleToggleFavorite}>
-                    {isFavorite(photo.id) ? '♥' : '♡'}
-                </button>
+                      className="downloadButton"
+                      href={photo.links.download}
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    ></a>
+                    
                 </div>
-
-                
             </div>
             <img src={photo.urls.regular} alt={photo.alt_description} />
             <h2>{photo.description || photo.alt_description || 'Untitled'}</h2>   
-    </div>
+        </div>
+        </div>
+        
     </>
     
   );

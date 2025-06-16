@@ -5,15 +5,14 @@ export default function Navigation() {
     return <>
         <nav className="nav">
         <Link to="/">
-            <img src={logo} alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
         </Link>
         <div className="navButton">
-            <Link to="/" className='favoritesLink'>
-            <p>Поиск</p>
-        </Link>
-        <Link to="/favorites" className='favoritesLink'>
-            <span>♡</span><p> Избранное</p>
-        </Link>
+            <Link to="/" className='searchLink'>
+                
+            </Link>
+            <Link to="/favorites" className='favoritesLink'>
+            </Link>
         </div>
       </nav>
     </>
