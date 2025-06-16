@@ -25,7 +25,6 @@ export default function PhotoDetail() {
   return (
     <>
         <Header/>
-        {/* <div className="photoDetailPverlay"></div> */}
         <div className="photoDetailBackground">
           
           <div className="photoDetail">
@@ -52,7 +51,6 @@ export default function PhotoDetail() {
             <h2>{photo.description || photo.alt_description || 'Untitled'}</h2>   
         </div>
         </div>
-        
     </>
     
   );
